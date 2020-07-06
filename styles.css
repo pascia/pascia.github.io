@@ -1,0 +1,19 @@
+#header {
+    text-align: center;
+    padding: 40px;
+}
+
+div#nav {
+    align: center;
+    text-align: center;
+}
+
+.jumbotron {padding: 40px;}
+
+a {color:blue}
+
+#maincon {margin: 0px,40px}
+
+.my-4 {padding: 0px}
+
+ul{ font-size:20px }

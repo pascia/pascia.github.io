@@ -1,19 +1,97 @@
-#header {
-    text-align: center;
-    padding: 40px;
+/* Styles for pascia.github.io */
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2016/07/08/13/37/texture-1504364_960_720.jpg");
 }
 
-div#nav {
-    align: center;
+
+header {
+    background-color: #e9ecef;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
-.jumbotron {padding: 40px;}
+.my-2 {
+    background-color: #404040;
+}
 
-a {color:blue}
+.jumbotron {
+    opacity: 0.85;
+    padding-top: 20px;
+    padding-left: 30px;
+    border: 2px solid #202020;
+}
 
-#maincon {margin: 0px,40px}
+h2, h3 {
+    margin-left: 40px;
+    color: black;
+}
 
-.my-4 {padding: 0px}
+h4 {
+    margin-left: 20px;
+    color: black;
+}
 
-ul{ font-size:20px }
+img {
+    size: %100;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    opacity: inherit;
+    padding: 5px;
+    width: 285px;
+}
+
+p.acik {
+  color: black;
+  font-size: 18px;
+  text-align: justify;
+}
+
+ul>li {
+  color: black;
+}
+
+ul {
+    font-size: 20px;
+}
+
+.right {
+  text-align: right;
+  align: right;
+}
+
+.col-3.jumbotron > ul {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.col-3.jumbotron {
+    height: inherit;
+    font-style: bold;
+    margin-bottom: 20px;
+}
+
+.col-7 {
+    padding-top: 15px;
+}
+
+.row {
+    height: auto;
+
+}
+
+.akis {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.altband{
+  margin-top: 90px;
+  padding: 60px;
+  background-color: #e9ecef;
+  opacity: 0.85;
+  border-top: 2px dashed black;
+}

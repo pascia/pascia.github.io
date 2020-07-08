@@ -1,0 +1,23 @@
+.navbar {
+  background-color: black;
+  color: white;
+}
+
+.bi-globe2 {
+  margin-left: 10px;
+  margin-top: -5px;
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  color: red;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+
+.navdiv {
+  width: 80px;
+}

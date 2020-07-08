@@ -1,5 +1,45 @@
+/* Styles for pascia.github.io */
+body {
+    background-color: darkgray;
+}
 
-* {
-  font-color: white;
-  background-color: black;
+
+header {
+    background-color: #e9ecef;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+
+.my-2 {
+    background-color: #e0e0e0;
+}
+
+.jumbotron {
+    border: 2px solid #d0d0d0;
+}
+
+h2, h3 {
+    color: whitesmoke;
+}
+
+h4 {
+    color: whitesmoke;
+}
+
+img {
+    border: 2px solid #606060;
+}
+
+p.acik {
+  color: white;
+  font-size: 18px;
+}
+
+ul>li {
+  color: white;
+}
+
+.flex {
+  background-color: #e9ecef;
+  border-top: 2px dashed black;
 }

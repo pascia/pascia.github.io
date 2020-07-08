@@ -58,9 +58,14 @@ ul {
     font-size: 20px;
 }
 
-.right {
-  text-align: right;
-  align: right;
+.flex {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+  padding: 60px;
+  background-color: #e9ecef;
+  opacity: 0.85;
+  border-top: 2px dashed black;
 }
 
 .col-3.jumbotron > ul {
@@ -80,18 +85,9 @@ ul {
 
 .row {
     height: auto;
-
 }
 
 .akis {
     margin-left: 10px;
     margin-bottom: 20px;
-}
-
-.altband{
-  margin-top: 90px;
-  padding: 60px;
-  background-color: #e9ecef;
-  opacity: 0.85;
-  border-top: 2px dashed black;
 }

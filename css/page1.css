@@ -1,23 +1,45 @@
 .navbar {
   background-color: black;
   color: white;
+  justify-content: space-between;
 }
 
 .bi-globe2 {
   margin-left: 10px;
+  margin-right: 5px;
   margin-top: -5px;
+}
+
+.navbar-brand:hover {
+  color: red;
+  transition-duration: 0.6s;
 }
 
 a {
   color: red;
+  font-weight: lighter;
 }
 
 a:hover {
   color: red;
   opacity: 0.8;
-  font-weight: bolder;
+  font-weight: normal;
+}
+
+.flex{
+  display: flex;
 }
 
 .navdiv {
-  width: 80px;
+  width: 125px;
+  margin-right:10px;
+  margin-left: 10px;
+  border-right:1px dotted #808080;
+  text-align: center;
+}
+
+.navdiv-last {
+  width: 125px;
+  margin-right:10px;
+  text-align: center;
 }

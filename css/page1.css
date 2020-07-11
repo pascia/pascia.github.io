@@ -57,6 +57,33 @@ h1 {
   margin-top: 1em;
 }
 
+@keyframes metin {
+  0% {visibility: hidden; opacity: 0; font-size: 0em;}
+  15% {visibility: visible; opacity: 1; font-size: 1em;}
+  30% {visibility: hidden; opacity: 0; font-size: 0em;}
+  100% {visibility: hidden; opacity: 0; font-size: 0em;}
+}
+
+.haberdetay {
+  opacity: 0;
+  visibility: hidden;
+  animation-name: metin;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes badge-breaking {
+  0% {background: red}
+  50% {background: orange}
+  100% {background: red}
+}
+
+  .badge {
+  background: red;
+  animation-name: badge-breaking;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 
 @keyframes kutular {
   0%   {height: 0px; visibility: hidden; opacity: 0;}
@@ -76,7 +103,7 @@ h1 {
   animation-iteration-count: infinite;
   visibility: hidden;
   background: url("https://pbs.twimg.com/profile_images/1151410974240444416/yVvaD7hU_400x400.jpg");
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: 5em;

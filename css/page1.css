@@ -41,8 +41,99 @@ a:hover {
   text-align: center;
 }
 
+p {
+  margin: 0;
+}
+
 .navdiv-last {
   width: 125px;
   margin-right:10px;
   text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman';
+  margin-top: 1em;
+}
+
+
+@keyframes kutular {
+  0%   {height: 0px; visibility: hidden; opacity: 0;}
+  15.8%  {height: 12em; visibility: visible; opacity: 1;}
+  31.9%  {visibility: hidden; opacity: 0;}
+  31.9%  {height: 0px; visibility: hidden;}
+  100% {height: 0px; visibility: hidden;}
+}
+
+.kutucu {
+  opacity: 0;
+  width: 400px;
+  height: 1em;
+  border: 1px solid black;
+  animation-name: kutular;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  visibility: hidden;
+  background: url("https://pbs.twimg.com/profile_images/1151410974240444416/yVvaD7hU_400x400.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 5em;
+  padding: 0.5em;
+  padding-left: 12.5em;
+  text-align: justify;
+}
+
+.ani1 {animation-delay: 5s;}
+.ani2 {animation-delay: 10s;}
+.ani3 {animation-delay: 15s;}
+.ani4 {animation-delay: 20s;}
+.ani5 {animation-delay: 25s;}
+
+
+.redbas  {
+  border-top-left-radius: 0.85em;
+}
+
+.redson {
+  border-bottom-left-radius: 0.85em;
+}
+.line2 > .red {
+  background: red;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: white;
+}
+
+.line1 > .red {
+  background: darkred;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: white;
+}
+
+.box1 {
+  margin-top: 3em;
+  margin-bottom: 5em;
+  margin-left: 10em;
+  margin-right: 10em;
+  align-items: center;
+  border: 0.1em solid black;
+  border-radius: 1em;
+}
+
+.line1 {
+  background: grey;
+}
+
+.line2,.line1 {
+  display: flex;
+}
+
+.haberbaslik {
+  padding-left: 2em;
+  width: 25em;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
 }

@@ -38,14 +38,56 @@
   color: white;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 1em;
-  padding-left: 0.5em;
-  border-left: 2px solid red;
   font-family: Abel;
 }
 
-.lead:hover {
-  bottom: 100%;
+.f-lead {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.container {
+  border-left: 2px solid red;
+  position: absolute;
+  width: 50%;
+  margin-left: 21em;
+  margin-top: 0.8em;
+}
+
+.container:hover .s-lead {
+  width: 100%;
+}
+
+.container:hover .f-lead {
+  width: 50%;
+}
+
+.f-lead{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+  white-space: nowrap;
+  margin-left: 1em;
+}
+
+.s-lead {
+  margin-top: auto;
+  margin-bottom: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .3s ease;
 }
 
 .logo {

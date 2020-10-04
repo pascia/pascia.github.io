@@ -45,10 +45,26 @@
       </div>
     </div>
     
-    <form action="https://google.com/search">
-      <label><input type="text" name="ad">İsminiz ve Soyisminiz</label>
-      <label><input type="text" name="ad">Email Adresiniz</label>
+    <form action="http://localhost:8000/">
+      <label>İsminiz ve Soyisminiz: <input type="text" name="isim"></label><br>
+      <label>Email Adresiniz: <input type="text" name="mail"></label><br>
+      <label>Doğum Yılınız: <input type="text" name="yaş"></label><br>
+      
+      Beklenen Eğitim Durumunuz:<br>
+      <input type="radio" id="0" name="egitim" value="0">
+      <label for="0">İlkokul Mezunu</label>
+      <input type="radio" id="1" name="egitim" value="1">
+      <label for="1">Ortaokul Mezunu</label>
+      <input type="radio" id="2" name="egitim" value="2">
+      <label for="2">Lise Mezunu</label>
+      <input type="radio" id="3" name="egitim" value="3">
+      <label for="3">Lisans Mezunu</label>
+      <input type="radio" id="4" name="egitim" value="4">
+      <label for="4">Yüksek Lisans Mezunu</label>
+      
       <input type="submit" value="Search">
+      
+      
     </form>
 
   </body>

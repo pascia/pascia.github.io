@@ -49,6 +49,10 @@ div.bloklar{
   flex-wrap: wrap;
 }
 
+div.icblok{
+  display: flex;
+}
+
 div.secimler{
   width: 11em;
 }
@@ -146,4 +150,40 @@ h2{
 
 p.okunmamis{
   color: #87faeb;
+}
+
+.forumlar{
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 1em;
+  width: 10em;
+
+}
+
+.forumlar ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 0em;
+  padding: 0;
+}
+
+.forumlar h2{
+  border-bottom: #87faeb 1px solid;
+}
+
+.forumlar *{
+  background: #232733;
+}
+
+.forumlar .li{
+  border-bottom: #232733 2px solid;
+}
+
+.forumlar .li:hover{
+  color: #87faeb;
+  font-size: 1.2em;
+  border-bottom: #87faeb 2px solid;
+  transition: 1s;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), #87faeb20);
 }

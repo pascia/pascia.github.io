@@ -1,0 +1,146 @@
+*{
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+  background-color: #232733;
+  color: #FFFFFF;
+}
+
+div{
+}
+
+div.header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0.2em;
+}
+
+h1{
+  margin: 0.1em;
+  color: #87faeb;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nick{
+  color: #87faeb;
+  background: #232733;
+}
+
+div.logo{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1em;
+  font-size: 1.2em;
+}
+
+ul.ayarlar{
+  margin-top:0.1em;
+}
+
+ul.ayarlar li{
+   display: block;
+   float: right;
+   margin-left: 0.8em;
+   font-weight: bold;
+}
+
+
+
+div.bloklar{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.secimler{
+  width: 11em;
+}
+
+div.secim-buton{
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+  border-right: #232733 3px solid;
+  background-color: #232733;
+  padding-left: 0.3em;
+}
+
+
+div.secim-buton:hover{
+  border-right: #87faeb 3px solid;
+  background-color: #182228;
+  transition: 0.5s;
+}
+
+div.akis{
+  width: 50em;
+}
+
+.akis-element{
+  background-color: #2f333d;
+  border-radius: 15px;
+  border: #40454f 1px solid;
+  padding: 0.6em;
+  padding-left: 1.2em;
+  margin-left: 1em;
+  margin-bottom: 0.8em;
+}
+
+img.avatar{
+  width: 1em;
+}
+
+img.head{
+  border :#40454f 1px solid;
+  width: 5em;
+  border-radius: 0.3em;
+}
+
+.akis-ust{
+  display: flex;
+  flex-wrap: wrap;
+}
+.konu{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 0.5em;
+}
+.akis p{
+  margin: 0;
+  color: #cccccc;
+  font-size: 0.8em;
+  font: italic;
+  width: 40em;
+}
+
+div.akis div,h2,p,a{
+  background-color: #2f333d;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+}
+.bilgiler{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bilgiler div{
+  display: flex;
+  flex-wrap: wrap;
+  width: 7em;
+  padding-left: 1em;
+}
+.bilgiler a{
+  margin-left: 3px;
+}
+
+div.akis a{
+  color: #87faeb;
+}
+h2{
+  margin: 0;
+  font-size: 1.6em;
+}
+
+p.okunmamis{
+  color: #87faeb;
+}

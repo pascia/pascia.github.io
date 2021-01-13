@@ -4,9 +4,6 @@
   color: #FFFFFF;
 }
 
-div{
-}
-
 div.header{
   display: flex;
   flex-wrap: wrap;
@@ -23,10 +20,11 @@ a{
   text-decoration: none;
 }
 
-.nick{
+.menu{
   color: #87faeb;
   background: #232733;
 }
+
 
 div.logo{
   display: flex;
@@ -46,8 +44,6 @@ ul.ayarlar li{
    font-weight: bold;
 }
 
-
-
 div.bloklar{
   display: flex;
   flex-wrap: wrap;
@@ -58,18 +54,25 @@ div.secimler{
 }
 
 div.secim-buton{
-  padding-top:0.2em;
-  padding-bottom:0.2em;
   border-right: #232733 3px solid;
   background-color: #232733;
-  padding-left: 0.3em;
 }
-
 
 div.secim-buton:hover{
   border-right: #87faeb 3px solid;
   background-color: #182228;
   transition: 0.5s;
+}
+
+.secimler a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  background:0;
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+  padding-left: 0.3em;
 }
 
 div.akis{

@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <title>test</title>
+    <style type="text/css" media="screen">
+        .sels {
+  display:grid;
+  height:15vh;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "1",
+    "2",
+    "3",
+    "4";
+}
+
+.sel {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-top: 0.5em;
+  background-color: #10101010;
+}
+
+.sel:hover {
+  background-color: #40404050;
+}
+
+.sorubox {
+  margin-bottom: 12em;
+}
+    </style>
+    <script type="text/javascript">
+      var gecmis = []
+var stats = []
+var dogumyeri = "Bilinmiyor"
+var db =[
+  ["Britanya'nın yağmurlu günlerinden birinde doğmuştun. Doğduğun yer olan",
+   "Londra, ülkenin en işlek ticaret merkezi olan başkentiydi.",
+   "Dublin, İrlandalıların yoğun olarak yaşadığı bir liman kentiydi.",
+   "Manchester, sanayileşmenin merkezi sayılan bir kuzey şehriydi.",
+   "İskoç dağları, soğuk ve kırsal olmasına rağmen halk tarafından sevilen bir bölgeydi."],//Soru 1
+  ["${dogumyeri} senin için",
+     "iyi hatıralar bırakmıştı.",
+     "karanlık geçmişi hatırlatıyordu.",
+     "eski güzel günlerden kalan son iyi şeydi.",
+     "hala üzerinde yaşadığın memleketindi"],//Soru 2.0
+    ["Dağlarda büyümek seni çocukluktan itibaren güçlü biri yapmıştı. Ama",
+     "Bir ailenin olmayışı sende yaradır.",
+     "Çocukluk zamanlarında bu kadar yıpranmanın bedelini gelecekte ödeyecektin.",
+     "Fakirlik ve kıtlık yüzünden pek çok gece aç yatmak zorunda kalmıştın.",
+     "Dağların yalnızlığı çocukluğunu derinden etkileyecekti."], //Soru 2.1
+    ["Çocukluğu atlatıp genç bir %cinsiyet% olduğunda...",
+     "Ailenin yanında kalmaya devam ettin",
+     "Bir askeri organizasyona katıldın.",
+     "${dogumyeri} şehrinde çalışmaya başladın",
+     "Gezgin bir maceracı oldun."]
+  ]
+
+
+function update() {
+  for (var i = 0; i < 4; i++){
+    document.getElementById("Soru").innerHTML = historic[historic.length-1].name[0]+"..."
+    document.getElementById(i+1).innerHTML = historic[historic.length-1].name[i+1]
+    document.getElementById("history").innerHTML = gecmis
+  }
+  for (let i=0; stats.length > i; i++){//stats listesini dekript etme
+    if (stats[i] == 100) {dogumyeri = "Londra"}
+    else if (stats[i] == 101) {dogumyeri = "Dublin"}
+    else if (stats[i] == 102) {dogumyeri = "Manchester"}
+    else if (stats[i] == 103) {dogumyeri = "İskoçya"}
+  }
+}
+
+var elementlerim = ["1","2","3","4"]
+for (const [i, val] of elementlerim.entries()) {
+  document.getElementById(val).onclick = function(x){
+    historic.push(historic[historic.length-1].children[historic[historic.length-1].name[5+i]])
+    gecmis.push(historic[historic.length-2].name[0]+" "+historic[historic.length-2].name[i+1]) //hikaye yazılıyor soru+seçim
+    stats.push(historic[historic.length-2].name[i+9])
+    update()
+  }
+}
+
+document.getElementById("5").onclick = function(x){
+  historic = [dogumyeri]
+  gecmis = []
+  update()//renderliyo
+}
+
+document.getElementById("6").onclick = function(x){
+  historic = historic.slice(0, -1);
+  gecmis = gecmis.slice(0, -1);
+  update()
+}
+
+
+// comlepiti patterny
+var Node = function (name) {
+    this.children = [];
+    this.name = name;
+}
+
+Node.prototype = {
+    add: function (child) {
+        this.children.push(child);
+    },
+
+    remove: function (child) {
+        var length = this.children.length;
+        for (var i = 0; i < length; i++) {
+            if (this.children[i] === child) {
+                this.children.splice(i, 1);
+                return;
+            }
+        }
+    },
+
+    getChild: function (i) {
+        return this.children[i];
+    },
+
+    hasChildren: function () {
+        return this.children.length > 0;
+    }
+}
+
+// recursively traverse a (sub)tree
+
+function traverse(indent, node) {
+    console.log(Array(indent++).join("--") + node.name);
+
+    for (var i = 0, len = node.children.length; i < len; i++) {
+        traverse(indent, node.getChild(i));
+    }
+}
+
+var lang;
+
+function run() {
+    globalThis.dogumyeri = new Node([...db[0],...[0,0,0,1],...[100,101,102,103]]); //doğum yeri-soru 1
+    var cocukluk_sehir = new Node([...db[1],...[0,0,0,0]]); //çocukluk-soru 2.0
+    var cocukluk_kirsal = new Node([...db[2],...[0,0,0,0]]); //çocukluk-soru 2.1
+    var genclik = new Node([...db[3],...[0,0,0,0]]);
+    var son = new Node(["son"])
+
+    dogumyeri.add(cocukluk_sehir)
+    dogumyeri.add(cocukluk_kirsal)
+  
+    cocukluk_sehir.add(genclik)
+    cocukluk_kirsal.add(genclik)
+  
+    genclik.add(son)
+  
+    traverse(1, dogumyeri);
+    return(0)
+}
+
+run()
+var historic = [dogumyeri]
+update()
+
+    </script>
+  </head>
+  <body>
+    <div class="sorubox">
+      <p id="Soru">Soruyu cevaplayın:</p>
+      <div class="sels">
+        <div class="sel" id="1">1.</div>
+        <div class="sel" id="2">2.</div>
+        <div class="sel" id="3">3.</div>
+        <div class="sel" id="4">4.</div>
+        <div class="sel" id="5" style="color: blue;background-color: #70101050;">resetle</div>
+        <div class="sel" id="6" style="color: blue;background-color: #30103050;">1 soru gel geriye</div>
+      </div>
+    </div>
+
+    <div>Hikaye</div>
+      <div id="history"></div>
+  </body>

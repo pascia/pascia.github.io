@@ -32,14 +32,13 @@
     <script type="text/javascript">window.onload = function () {
       var gecmis = []
 var stats = []
-var dogumyeri = "Bilinmiyor"
 var db =[
   ["Britanya'nın yağmurlu günlerinden birinde doğmuştun. Doğduğun yer olan",
    "Londra, ülkenin en işlek ticaret merkezi olan başkentiydi.",
    "Dublin, İrlandalıların yoğun olarak yaşadığı bir liman kentiydi.",
    "Manchester, sanayileşmenin merkezi sayılan bir kuzey şehriydi.",
    "İskoç dağları, soğuk ve kırsal olmasına rağmen halk tarafından sevilen bir bölgeydi."],//Soru 1
-  ["${dogumyeri} senin için",
+  ["Doğduğun şehir senin için",
      "iyi hatıralar bırakmıştı.",
      "karanlık geçmişi hatırlatıyordu.",
      "eski güzel günlerden kalan son iyi şeydi.",
@@ -62,12 +61,6 @@ function update() {
     document.getElementById("Soru").innerHTML = historic[historic.length-1].name[0]+"..."
     document.getElementById(i+1).innerHTML = historic[historic.length-1].name[i+1]
     document.getElementById("history").innerHTML = gecmis
-  }
-  for (let i=0; stats.length > i; i++){//stats listesini dekript etme
-    if (stats[i] == 100) {dogumyeri = "Londra"}
-    else if (stats[i] == 101) {dogumyeri = "Dublin"}
-    else if (stats[i] == 102) {dogumyeri = "Manchester"}
-    else if (stats[i] == 103) {dogumyeri = "İskoçya"}
   }
 }
 
